@@ -273,11 +273,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Gather values
       const name    = contactForm.name.value.trim();
       const email   = contactForm.email.value.trim();
-      const subject = contactForm.subject.value.trim();
       const message = contactForm.message.value.trim();
 
       // Basic validation
-      if (!name || !email || !subject || !message) {
+      if (!name || !email || !message) {
         showFeedback('Please fill in all fields before sending.', 'error');
         return;
       }

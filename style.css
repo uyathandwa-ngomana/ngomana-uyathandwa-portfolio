@@ -1214,8 +1214,7 @@ input, textarea {
 
 .timeline-heading {
   margin-bottom: var(--space-8);
-  padding-left: var(--space-2);
-  border-left: 3px solid var(--accent);
+  padding-left: calc(60px + var(--space-6));
 }
 
 .timeline-section-title {
@@ -1751,6 +1750,10 @@ input, textarea {
   .timeline-item {
     grid-template-columns: 48px 1fr;
     gap: var(--space-4);
+  }
+
+  .timeline-heading {
+    padding-left: calc(48px + var(--space-4));
   }
 
   .timeline-marker {
