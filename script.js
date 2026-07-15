@@ -440,4 +440,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+  /* ============================================================
+     14. REVEAL FAIL-SAFE
+         Guarantees .reveal elements never stay stuck invisible,
+         even if the IntersectionObserver above fails to fire for
+         them (e.g. due to a layout timing issue on a particular
+         section). Runs once, shortly after everything has loaded.
+  ============================================================ */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(el => {
+        el.classList.add('visible');
+      });
+    }, 1500);
+  });
+
 }); // end DOMContentLoaded
